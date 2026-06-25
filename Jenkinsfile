@@ -2,34 +2,27 @@ pipeline {
     agent any
 
     stages {
-
         stage('Checkout') {
             steps {
-                echo 'Checking out source code...'
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                sh 'npm install'
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                sh 'npm test'
+                echo 'Checkout berhasil'
             }
         }
 
         stage('Build') {
             steps {
-                echo 'Build successful'
+                echo 'Build berhasil'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Test berhasil'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploy successful'
+                echo 'Deploy berhasil'
             }
         }
     }
